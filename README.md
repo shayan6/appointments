@@ -73,4 +73,4 @@
 
 If you have any questions or concerns, feel free to reach out via email:
 
-- Project Maintainer: [your.email@example.com](mailto:shayanshaikh996@gmail.com)
+- Project Maintainer: [shayanshaikh996@gmail.com](mailto:shayanshaikh996@gmail.com)
