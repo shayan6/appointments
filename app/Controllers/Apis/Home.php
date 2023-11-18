@@ -64,10 +64,36 @@ class Home extends BaseController
   // #####################################################################################################
   // api read data #######################################################################################
   // #####################################################################################################
+  public function getAppointments()
+  {
+    $pageNo = $this->request->getGet('pageNo') ? $this->request->getGet('pageNo') : 1;
+    $pageSize = $this->request->getGet('pageSize') ? $this->request->getGet('pageSize') : 20;
+    $search = $this->request->getGet('search') ? $this->request->getGet('search') : '';
+    $sortBy = $this->request->getGet('sortBy') ? $this->request->getGet('sortBy') : 'location_name';
+    $sortDesc = $this->request->getGet('sortDesc');
+    $this->SettingLibrary->send_json($this->HomeModel->getAppointments($pageNo, $pageSize, $search, $sortBy, $sortDesc));
+  }
+
+  public function getPanelSettings()
+  {
+    $this->SettingLibrary->send_json($this->HomeModel->getPanelSettings());
+  }
 
   public function getFrontEndPanels()
   {
     $this->SettingLibrary->send_json($this->HomeModel->getFrontEndPanels());
+  }
+
+  public function saveFrontEndPanels()
+  {
+    $jsonData = json_decode(file_get_contents('php://input'), true);
+    if (is_array($jsonData) && isset($jsonData[0])) {
+      $this->SettingLibrary->send_json(array("status" => $this->HomeModel->saveFrontEndPanels($jsonData)));
+      // Use $firstElement or perform desired operations
+    } else {
+      // Handle the case when the JSON data is not an array or index 0 does not exist
+      $this->SettingLibrary->send_json("Handle the case when the JSON data is not an array or index 0 does not exist");
+    }
   }
 
   public function getLocations()
