@@ -68,3 +68,9 @@
 - This application uses CodeIgniter as the underlying PHP framework.
 - Ensure that the database is properly configured and migrated before using the API.
 - Update the `app/config/app.php` file with any necessary configuration changes.
+
+## Contact
+
+If you have any questions or concerns, feel free to reach out via email:
+
+- Project Maintainer: [your.email@example.com](mailto:shayanshaikh996@gmail.com)
