@@ -1,4 +1,10 @@
-## API Endpoints using CodeIgniter 4
+## Appointment webpage and API Endpoints using CodeIgniter 4
+
+The Appointment System is a web application designed to manage and schedule appointments efficiently. It provides a user-friendly interface for clients, allowing them to get appointment using webpage.
+
+## Screenshots
+
+![Screenshot 1](./assets/img/app.jpg)
 
 ### 1. Create Appointment
 
