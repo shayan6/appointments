@@ -1,63 +1,70 @@
-# CodeIgniter 4 Application Starter
+## API Endpoints using CodeIgniter 4
 
-## What is CodeIgniter?
+### 1. Create Appointment
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](http://codeigniter.com).
+- **Endpoint:** `/api/createAppointment`
+- **Method:** `POST`
+- **Parameters:** See documentation for required parameters.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+### 2. Get Appointments
 
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
+- **Endpoint:** `/api/getAppointments`
+- **Method:** `GET`
+- **Parameters:** See documentation for optional parameters.
 
-The user guide corresponding to this version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+### 3. Get Panel Settings
 
-## Installation & updates
+- **Endpoint:** `/api/getPanelSettings`
+- **Method:** `GET`
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+### 4. Get Frontend Panels
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+- **Endpoint:** `/api/getFrontEndPanels`
+- **Method:** `GET`
 
-## Setup
+### 5. Save Frontend Panels
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+- **Endpoint:** `/api/saveFrontEndPanels`
+- **Method:** `POST`
+- **Parameters:** JSON data containing frontend panel information.
 
-## Important Change with index.php
+### 6. Get Locations
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+- **Endpoint:** `/api/getLocations`
+- **Method:** `GET`
+- **Parameters:** See documentation for optional parameters.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+### 7. Get Staff
 
-**Please** read the user guide for a better explanation of how CI4 works!
+- **Endpoint:** `/api/getStaff`
+- **Method:** `GET`
+- **Parameters:** See documentation for optional parameters.
 
-## Repository Management
+### 8. Get Services
 
-We use Github issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+- **Endpoint:** `/api/getServices`
+- **Method:** `GET`
+- **Parameters:** See documentation for optional parameters.
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+### 9. Get Datetime
 
-## Server Requirements
+- **Endpoint:** `/api/getDatetime`
+- **Method:** `GET`
+- **Parameters:** See documentation for required parameters.
 
-PHP version 7.3 or higher is required, with the following extensions installed:
+### 10. Get Country
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+- **Endpoint:** `/api/getCountry`
+- **Method:** `GET`
+- **Parameters:** See documentation for optional parameters.
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+### 11. Get Availability
 
-- json (enabled by default - don't turn it off)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-- xml (enabled by default - don't turn it off)
+- **Endpoint:** `/api/getAvailability`
+- **Method:** `GET`
+
+## Notes
+
+- This application uses CodeIgniter as the underlying PHP framework.
+- Ensure that the database is properly configured and migrated before using the API.
+- Update the `app/config/app.php` file with any necessary configuration changes.
